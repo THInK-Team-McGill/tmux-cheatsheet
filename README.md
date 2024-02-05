@@ -35,7 +35,7 @@ tmux kill-session -t <session_name>
 Replace <session_name> with the name of the session you want to delete.
 
 
-### 5. Delete a Session by Name
+### 5. Delete all sessions
 
 ```bash
 tmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs -I {} tmux kill-session -t {}
